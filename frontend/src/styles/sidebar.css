@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+aside {
+    background-color: #1e1e1e; /* Match the dark theme of the app */
+    position: fixed;
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
+}
+
+h1 {
+    color: #ffffff; /* White text for the title */
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.sidebaritems {
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.8); /* Slightly muted white for text */
+    font-size: 15px;
+    font-weight: 400; /* Slightly bolder for better readability */
+    padding: 8px 12px; /* Adjust padding for better spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sidebaritems:hover {
+    background-color: #2a2a2a; /* Slightly lighter background on hover */
+    color: #ffffff; /* Bright white text on hover */
+}
+
+.seperator {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator */
+}
+
+.sidebar {
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+.sidebaritems span {
+    font-family: 'Inter', sans-serif; /* Consistent font with the app */
+}
+
+.sidebaritems svg {
+    color: #9ca3af; /* Muted color for icons */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.sidebaritems:hover svg {
+    color: #ffffff; /* Bright white icons on hover */
+}

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.searchbar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.analyse-btn {
+  background-color: rgb(255 70 2 / 95%);
+  color: #333;
+  cursor: pointer;
+  font-family: "IBM", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 9px;
+  margin-left: 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.analyse-btn:active {
+  background-color: #dcdcdc;
+  transform: translateY(1px);
+}
+
+input {
+  outline: none;
+  border-radius: 10px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 300;
+}
+input:focus {
+  border-color: inherit;
+  box-shadow: none;
+}

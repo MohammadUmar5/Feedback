@@ -1,0 +1,27 @@
+import React from "react";
+import FiltersPanel from "./FiltersPanel";
+import { ArrowLeft } from "lucide-react";
+
+export default function Fsidebar({ onArrowClick }) {
+  return (
+    <div
+      className="z-10 fixed top-0 left-0 w-70 h-160 text-white p-4 border-r border-zinc-800"
+      style={{ backgroundColor: "rgb(14,14,17)" }}
+    >
+      <div className="filterName flex items-center justify-start">
+        <button
+          className="border border-zinc-700 rounded-full p-2 mb-4 hover:bg-zinc-700 transition duration-200"
+          onClick={onArrowClick} // Call the callback when the button is clicked
+        >
+          <ArrowLeft className="w-4 h-4" />
+        </button>
+        <h2 className="text-xl ml-4 font-bold text-purple-400 mb-3">Filters</h2>
+      </div>
+
+      <div className="my-2 w-70 relative right-4 mb-5">
+        <hr className="border-t border-zinc-700" />
+      </div>
+      <FiltersPanel />
+    </div>
+  );
+}
