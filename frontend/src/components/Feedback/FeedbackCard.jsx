@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
   return (
-    <div className="mr-4 ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-80 max-w-sm">
+    <div className=" ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-80 max-w-sm">
       <div className="flex items-start justify-between">
         <h2 className="text-white text-lg font-semibold">{title}</h2>
         {pinned && (
@@ -25,19 +25,10 @@ function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
       </div>
 
       {/* Sentiment Bar */}
-      <div className="h-1.5 w-full bg-gray-700 rounded-full my-3">
-        <div
-          className={cn("h-full rounded-full", {
-            "bg-red-500": sentiment === "negative",
-            "bg-green-500": sentiment === "positive",
-            "bg-yellow-400": sentiment === "neutral",
-          })}
-          style={{ width: "100%" }}
-        ></div>
-      </div>
+   
 
       {/* Feedback List */}
-      <div className="space-y-2 text-sm">
+      <div className="mt-3  space-y-2 text-sm">
         {feedbacks.map((item, idx) => (
           <div key={idx} className="bg-[#1a1a1c] p-2 rounded-md">
             <div className="flex justify-between text-gray-300">

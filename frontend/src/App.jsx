@@ -44,6 +44,31 @@ function App() {
                 },
               ]}
             />
+                      <FeedbackCard
+              title="Users can't find filters on dashboard"
+              pinned={true}
+              stats={{ total: 3, idea: 1, bug: 1, comment: 1 }}
+              sentiment="negative"
+              feedbacks={[
+                {
+                  user: "user123",
+                  source: "Reddit",
+                  message:
+                    "I can't find the filters on the dashboard. It's very frustrating!",
+                },
+                {
+                  user: "jane_doe",
+                  source: "Twitter",
+                  message:
+                    "The dashboard filters are hidden behind three menus.",
+                },
+                {
+                  user: "frustrated_user",
+                  source: "Support",
+                  message: "Where are the filters? I spent 10 minutes looking.",
+                },
+              ]}
+            />
             <FeedbackCard
               title="Users can't find filters on dashboard"
               pinned={true}
