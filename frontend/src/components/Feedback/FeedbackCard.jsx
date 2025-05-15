@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
   return (
-    <div className=" ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-80 max-w-sm">
+    <div className=" ml-9 sm:ml-3 md:ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-65 sm:w-80 md:w-80 max-w-sm">
       <div className="flex items-start justify-between">
         <h2 className="text-white text-lg font-semibold">{title}</h2>
         {pinned && (
@@ -30,12 +30,12 @@ function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
       {/* Feedback List */}
       <div className="mt-3  space-y-2 text-sm">
         {feedbacks.map((item, idx) => (
-          <div key={idx} className="bg-[#1a1a1c] p-2 rounded-md">
+          <div key={idx} className="bg-[#1a1a1c] p-2 rounded-md h-auto sm:h-auto md:h-auto md:text-xs sm:text-sm text-xs">
             <div className="flex justify-between text-gray-300">
-              <span className="font-medium">{item.user}</span>
+              <span className="font-small sm:font-medium md:font-medium">{item.user}</span>
               <Badge
                 variant="outline"
-                className={cn("text-xs", {
+                className={cn("text-xs sm:text-xs md:text-xs ", {
                   "text-red-400": item.source === "Reddit",
                   "text-blue-400": item.source === "Twitter",
                   "text-purple-400": item.source === "In-App",
@@ -51,7 +51,7 @@ function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
       </div>
 
       {/* Actions */}
-      <div className="mt-6 ml-5">
+      <div className="mt-6 ml-0 sm:ml-5 md:ml-5">
         <div className="flex gap-2">
           <Button className="bg-transparent border border-zinc-700 " size="sm">
             <TagIcon className="w-4 h-4 mr-1" /> Tag

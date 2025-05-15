@@ -11,9 +11,9 @@
   color: #333;
   cursor: pointer;
   font-family: "IBM", sans-serif;
-  font-size: 15px;
+  /* font-size: 15px; */
   font-weight: 500;
-  padding: 4px 9px;
+  /* padding: 4px 9px; */
   margin-left: 10px;
   border-radius: 6px;
   transition: all 0.2s ease;
@@ -27,7 +27,7 @@
 input {
   outline: none;
   border-radius: 10px;
-  height: 35px;
+  /* height: 35px; */
   font-size: 15px;
   font-weight: 300;
 }
