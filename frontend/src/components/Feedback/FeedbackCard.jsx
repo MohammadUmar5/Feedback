@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
   return (
-    <div className=" ml-9 sm:ml-3 md:ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-62 sm:w-80 md:w-80">
+    <div className=" ml-9 sm:ml-3 md:ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-100 sm:w-80 md:w-80">
       <div className="flex items-start justify-between">
         <h2 className="text-white text-lg font-semibold">{title}</h2>
         {pinned && (
@@ -59,22 +59,22 @@ function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
       </div>
 
       {/* Actions */}
-      <div className="mt-6 ml-0 sm:ml-5 md:ml-5">
+      <div className="mt-6 ml-5 sm:ml-5 md:ml-5">
         <div className="flex gap-2">
-          <Button className="bg-transparent border border-zinc-700 " size="sm">
-            <TagIcon className="w-4 h-4 mr-0 sm:mr-1 md:mr-2" /> Tag
+          <Button className="w-20 sm:w-10 md:w-auto bg-transparent border border-zinc-700 " size="sm">
+            <TagIcon className="w-4 h-4 mr-2 sm:mr-1 md:mr-2" /> Tag
           </Button>
-          <Button className="bg-transparent border border-zinc-700" size="sm">
-            <PinIcon className="w-4 h-4 mr-0 sm:mr-1 md:mr-2" /> Pin
+          <Button className="w-20 sm:w-10 md:w-auto bg-transparent border border-zinc-700" size="sm">
+            <PinIcon className="w-4 h-4 mr-2 sm:mr-1 md:mr-2" /> Pin
           </Button>
-          <Button className="bg-transparent border border-zinc-700" size="sm">
-            <TicketIcon className="w-4 h-4 mr-0 sm:mr-1 md:mr-2" /> Jira
+          <Button className="w-20 sm:w-10 md:w-auto bg-transparent border border-zinc-700" size="sm">
+            <TicketIcon className="w-4 h-4 mr-2 sm:mr-1 md:mr-2" /> Jira
           </Button>
         </div>
         <Button
           variant="ghost"
           size="sm"
-          className=" mt-2 w-55 sm:w-58 md:w-61 bg-transparent border border-zinc-700 text-gray-400"
+          className=" mt-2 w-65 sm:w-58 md:w-61 bg-transparent border border-zinc-700 text-gray-400"
         >
           Ignore
         </Button>

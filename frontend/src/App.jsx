@@ -16,7 +16,7 @@ function App() {
         <Sidebar onFeedbackClick={() => setActiveView("feedback")} />
       )}
       {activeView === "feedback" && (
-        <div className="dataflex p-6">
+        <div className="dataflex p-6 w-200 md:w-full sm:w-full ml-0 md:ml-66 sm:ml30 ">
           <FeedbackGroup title="Recent Feedback" />
           <div className="feedbackCard">
             <FeedbackCard
