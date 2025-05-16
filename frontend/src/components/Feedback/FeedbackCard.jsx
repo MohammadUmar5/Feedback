@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
   return (
-    <div className=" ml-9 sm:ml-3 md:ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-100 sm:w-80 md:w-80">
+    <div className=" ml-6 sm:ml-3 md:ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-100 sm:w-80 md:w-80">
       <div className="flex items-start justify-between">
         <h2 className="text-white text-lg font-semibold">{title}</h2>
         {pinned && (

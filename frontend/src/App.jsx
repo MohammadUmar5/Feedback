@@ -16,9 +16,9 @@ function App() {
         <Sidebar onFeedbackClick={() => setActiveView("feedback")} />
       )}
       {activeView === "feedback" && (
-        <div className="dataflex pl-0  sm:pl-0 p-6 md:p-6 sm:p-6 w-200 md:w-full sm:w-full ml-0 md:ml-66 sm:ml30 ">
+        <div className="dataflex pl-0 sm:pl-0 p-6 md:p-6 sm:p-6 w-95 md:w-full sm:w-full ml-0 md:ml-66 sm:ml-30  ">
           <FeedbackGroup title="Recent Feedback" />
-          <div className="feedbackCard">
+          <div className="feedbackCard  md:mr-0 sm:mr-10">
             <FeedbackCard
               title="Users can't find filters on dashboard"
               pinned={true}
