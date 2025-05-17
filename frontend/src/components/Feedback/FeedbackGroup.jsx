@@ -10,9 +10,9 @@ export default function FeedbackGroup({ title }) {
         <button className="ml-10 mt-4 block sm:hidden p-2 rounded-md bg-transparent hover:bg-zinc-800 transition">
           <FiMenu className="w-5 h-5 text-white" />
         </button>
-        <h2 className="ml-3 sm:ml-6 md:ml-10 text-xl sm:text-sm md:text-xl mt-4 md:mt-0 sm:mt-0 mb-0 font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-400 from-pink-500 flex items-center">
+        <h2 className="ml-3 sm:ml-6 md:ml-10 text-xl sm:text-sm md:text-xl mt-4 md:mt-0 sm:mt-0 mb-0 font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-400 from-pink-500 flex items-center w-full">
           {title}
-          <FiFilter className="block sm:hidden ml-35 text-white" />
+          <FiFilter className="block sm:hidden ml-20 text-white" />
           {/* Filter icon visible only on mobile */}
         </h2>
       </div>
