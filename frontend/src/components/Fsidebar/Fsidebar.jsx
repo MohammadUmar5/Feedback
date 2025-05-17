@@ -15,7 +15,7 @@ export default function Fsidebar({ onArrowClick }) {
         >
           <ArrowLeft className="w-4 h-4" />
         </button>
-        <h2 className="text-lg sm:text-sm md:text-xl ml-1.5 sm:ml-4 md:ml-4 font-bold text-purple-400 mb-3">
+        <h2 className="text-lg sm:text-sm md:text-xl ml-1.5 sm:ml-4 md:ml-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500 mb-3">
           Filters
         </h2>
       </div>
