@@ -1,104 +1,27 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Fsidebar from "./components/Fsidebar/Fsidebar";
-import FeedbackGroup from "./components/Feedback/FeedbackGroup";
-import FeedbackCard from "./components/Feedback/FeedbackCard";
+import FeedbackPage from "./components/Feedback/FeedbackPage";
 
 function App() {
-  const [activeView, setActiveView] = useState("default"); // State to track the active view
+  const location = useLocation();
 
   return (
     <div className="flex">
-      {activeView === "feedback" ? (
-        <Fsidebar onArrowClick={() => setActiveView("default")} />
-      ) : (
-        <Sidebar onFeedbackClick={() => setActiveView("feedback")} />
-      )}
-      {activeView === "feedback" && (
-        <div className="dataflex pl-0 sm:pl-0 p-6 md:p-6 sm:p-6 w-95 md:w-full sm:w-full ml-0 md:ml-66 sm:ml-30  ">
-          <FeedbackGroup title="Recent Feedback" />
-          <div className="feedbackCard  md:mr-0 sm:mr-10">
-            <FeedbackCard
-              title="Users can't find filters on dashboard"
-              pinned={true}
-              stats={{ total: 3, idea: 1, bug: 1, comment: 1 }}
-              sentiment="negative"
-              feedbacks={[
-                {
-                  user: "user123",
-                  source: "Reddit",
-                  message:
-                    "I can't find the filters on the dashboard. It's very frustrating!",
-                },
-                {
-                  user: "jane_doe",
-                  source: "Twitter",
-                  message:
-                    "The dashboard filters are hidden behind three menus.",
-                },
-                {
-                  user: "frustrated_user",
-                  source: "Support",
-                  message: "Where are the filters? I spent 10 minutes looking.",
-                },
-              ]}
-            />
-                      <FeedbackCard
-              title="Users can't find filters on dashboard"
-              pinned={true}
-              stats={{ total: 3, idea: 1, bug: 1, comment: 1 }}
-              sentiment="negative"
-              feedbacks={[
-                {
-                  user: "user123",
-                  source: "Reddit",
-                  message:
-                    "I can't find the filters on the dashboard. It's very frustrating!",
-                },
-                {
-                  user: "jane_doe",
-                  source: "Twitter",
-                  message:
-                    "The dashboard filters are hidden behind three menus.",
-                },
-                {
-                  user: "frustrated_user",
-                  source: "Support",
-                  message: "Where are the filters? I spent 10 minutes looking.",
-                },
-              ]}
-            />
-            <FeedbackCard
-              title="Users can't find filters on dashboard"
-              pinned={true}
-              stats={{ total: 3, idea: 1, bug: 1, comment: 1 }}
-              sentiment="negative"
-              feedbacks={[
-                {
-                  user: "user123",
-                  source: "Reddit",
-                  message:
-                    "I can't find the filters on the dashboard. It's very frustrating!",
-                },
-                {
-                  user: "jane_doe",
-                  source: "Twitter",
-                  message:
-                    "The dashboard filters are hidden behind three menus.",
-                },
-                {
-                  user: "frustrated_user",
-                  source: "Support",
-                  message: "Where are the filters? I spent 10 minutes looking.",
-                },
-              ]}
-            />
-          </div>
-        </div>
-      )}
+      {/* Hide Sidebar on mobile when on FeedbackPage */}
+      {location.pathname !== "/feedback" && <Sidebar />}
+      <Routes>
+        <Route path="/" element={<div>Welcome to SubRadar!</div>} />
+        <Route path="/feedback" element={<FeedbackPage />} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
+export default function AppWrapper() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
