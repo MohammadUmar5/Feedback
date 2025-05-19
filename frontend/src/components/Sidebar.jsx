@@ -12,8 +12,11 @@ function Sidebar() {
   };
 
   return (
-    <aside className="h-screen w-55 px-4 py-6 flex flex-col justify-between sidebar">
-      <div>
+    <aside
+      className="h-screen w-55 py-6 flex-col justify-between sidebar sm:block hidden" // Sidebar is hidden by default on mobile
+      style={{ backgroundColor: "rgb(14,14,17)" }}
+    >
+      <div className="px-4">
         <h1 className="text-2xl font-bold mb-8">SubRadar</h1>
         <nav className="space-y-4">
           <SidebarItem icon={<Home size={18} />} label="Dashboard" to="/" />
@@ -24,16 +27,17 @@ function Sidebar() {
           />
           <SidebarItem icon={<BarChart size={18} />} label="Analytics" />
           <SidebarItem icon={<Bookmark size={18} />} label="Saved" />
-          <hr className="seperator border-t my-4" />
         </nav>
       </div>
-      <div>
+      <hr className="seperator border-t mr-100 mt-5 w-55" />
+
+      <div className="px-4 mt-45">
         <SidebarItem
           icon={<Settings size={18} />}
           label="Settings"
           onClick={handleSettingsClick}
         />
-        <div className="mt-10 text-sm text-gray-400">v1.0</div>
+        <div className="mt-10 ml-3 text-sm text-gray-400">v1.0</div>
       </div>
       <SettingsModal
         open={isSettingsModalOpen}

@@ -13,9 +13,9 @@ h1 {
 
 .sidebaritems {
     border-radius: 6px;
-    color: rgba(255, 255, 255, 0.8); /* Slightly muted white for text */
+    color: rgba(255, 255, 255); /* Slightly muted white for text */
     font-size: 15px;
-    font-weight: 400; /* Slightly bolder for better readability */
+    font-weight: 300; /* Slightly bolder for better readability */
     padding: 8px 12px; /* Adjust padding for better spacing */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -29,9 +29,6 @@ h1 {
     border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator */
 }
 
-.sidebar {
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-}
 
 .sidebaritems span {
     font-family: 'Inter', sans-serif; /* Consistent font with the app */

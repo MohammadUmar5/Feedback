@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import FiltersPanel from "./FiltersPanel";
 import { ArrowLeft } from "lucide-react";
 
-export default function Fsidebar({ onArrowClick }) {
+export default function Fsidebar() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   return (
     <div
       className="hidden sm:block z-10 fixed top-0 left-0 w-30 sm:w-64 md:w-68 h-screen text-white p-4 border-r border-zinc-800"
@@ -11,7 +14,7 @@ export default function Fsidebar({ onArrowClick }) {
       <div className="filterName flex items-center justify-start">
         <button
           className="border border-zinc-700 rounded-full p-2 mb-4 hover:bg-zinc-700 transition duration-200"
-          onClick={onArrowClick}
+          onClick={() => navigate("/")} // Redirect to the home page
         >
           <ArrowLeft className="w-4 h-4" />
         </button>
