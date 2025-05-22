@@ -14,12 +14,8 @@ function App() {
   const location = useLocation(); // Get the current route
 
   return (
-    <div className="flex h-screen">
-      {/* Conditionally render Sidebar */}
-      {location.pathname !== "/feedback" && (
-        <Sidebar /> // Sidebar is always rendered unless on /feedback
-      )}
-      <div className="flex-1 overflow-y-auto"> {/* Main content area */}
+    <div className="flex h-screen ">
+      <div className="flex-1 overflow-y-auto  overflow-x-hidden "> {/* Main content area */}
         <Routes>
           <Route path="/" element={<DashboardPage />} />
           <Route path="/feedback" element={<FeedbackPage />} />
