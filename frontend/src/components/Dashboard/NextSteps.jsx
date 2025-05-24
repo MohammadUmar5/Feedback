@@ -50,7 +50,7 @@ export default function NextSteps() {
   };
 
   return (
-    <div className="w-160 p-4 border h-120 overflow-x-hidden overflow-y-scroll border-zinc-600 hover:border-gray-400 transition rounded-xl">
+    <div className="w-160 p-4 border h-120 overflow-x-hidden overflow-y-auto border-zinc-600 hover:border-gray-400 transition rounded-xl">
       <h2 className="text-white text-lg font-semibold mb-4">Next Steps</h2>
       <div className="space-y-10 ml-2 mt-6 mr-2">
         {steps.map((step, index) => (

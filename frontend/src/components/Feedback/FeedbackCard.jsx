@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
   return (
-    <div className="mx-auto sm:ml-3 md:ml-3 bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-[90%] sm:w-80 md:w-80 max-w-md">
+    <div className="mx-auto bg-[#111215] rounded-2xl border border-[#2a2a2a] p-4 shadow-md w-[90%] sm:w-80 md:w-80 ">
       <div className="flex items-start justify-between">
         <h2 className="text-white text-lg font-semibold">{title}</h2>
         {pinned && (
@@ -57,13 +57,22 @@ function FeedbackCard({ title, pinned, stats, sentiment, feedbacks }) {
 
       <div className="mt-6 ml-2 sm:ml-5 md:ml-5">
         <div className="flex flex-wrap gap-2 justify-between sm:justify-start">
-          <Button className="flex-1 sm:flex-none w-full sm:w-auto bg-transparent border border-zinc-700" size="sm">
+          <Button
+            className="flex-1 sm:flex-none w-full sm:w-auto bg-transparent border border-zinc-700"
+            size="sm"
+          >
             <TagIcon className="w-4 h-4 mr-2 sm:mr-1 md:mr-2" /> Tag
           </Button>
-          <Button className="flex-1 sm:flex-none w-full sm:w-auto bg-transparent border border-zinc-700" size="sm">
+          <Button
+            className="flex-1 sm:flex-none w-full sm:w-auto bg-transparent border border-zinc-700"
+            size="sm"
+          >
             <PinIcon className="w-4 h-4 mr-2 sm:mr-1 md:mr-2" /> Pin
           </Button>
-          <Button className="flex-1 sm:flex-none w-full sm:w-auto bg-transparent border border-zinc-700" size="sm">
+          <Button
+            className="flex-1 sm:flex-none w-full sm:w-auto bg-transparent border border-zinc-700"
+            size="sm"
+          >
             <TicketIcon className="w-4 h-4 mr-2 sm:mr-1 md:mr-2" /> Jira
           </Button>
         </div>
